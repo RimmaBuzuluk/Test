@@ -1,0 +1,70 @@
+
+style.scss * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Сброс стилей для списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Сброс стилей для гиперссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Обнуление стандартных значений шрифтов */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Дополнительные сбросы и стили могут быть добавлены по вашему усмотрению */
+/* Ваши собственные стили могут быть добавлены после этого обнуления */
+@font-face {
+  font-family: "Название вашего шрифта";
+  src: url("../TTHoves-Hairline.ttf") format("woff"); /* Замените формат на нужный */
+}
+/* Основные стили вашего веб-сайта */
+body {
+  font-family: "Название вашего шрифта", sans-serif;
+  /* Другие стили для текста */
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1046px;
+  margin: 0px auto;
+}
+
+.header img {
+  width: 41.53px;
+  height: 68.55px;
+}
+.header .header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 102px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header_menu {
+  margin: 0px 0px 0px 133px;
+}
+.header .menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: aquamarine;
+}
