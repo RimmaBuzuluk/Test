@@ -9,6 +9,7 @@ style.scss * {
 /* Сброс стилей для списков */
 ul, ol {
   list-style: none;
+  padding: 0;
 }
 
 /* Сброс стилей для гиперссылок */
@@ -44,6 +45,9 @@ body {
 ._container {
   max-width: 1046px;
   margin: 0px auto;
+  padding: 0px 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .header img {
@@ -59,12 +63,29 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.header .menu {
+  padding: 5px 0;
+}
 .header .header_menu {
-  margin: 0px 0px 0px 133px;
+  margin: 0px 0px 0px 335px;
+}
+@media (max-width: 992px) {
+  .header .header_menu {
+    margin: 0px 0px 0px 80px;
+  }
+}
+@media (max-width: 767px) {
+  .header .header_menu {
+    margin: 0px 0px 0px 40px;
+  }
 }
 .header .menu_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: aquamarine;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.header .menu_list > .menu_item:not(:last-child) {
+  margin: 0px 61px 0px 0px;
 }
