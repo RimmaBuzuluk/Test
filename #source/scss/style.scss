@@ -1,33 +1,7 @@
-style.scss
-/* Обнуление (Reset) стилей */
+@import "nullstyle.scss";
+@import "options.scss";
 
-/* Сброс отступов и полей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Сброс стилей для списков */
-ul, ol {
-    list-style: none;
-    padding: 0;
-}
-
-/* Сброс стилей для гиперссылок */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Обнуление стандартных значений шрифтов */
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Дополнительные сбросы и стили могут быть добавлены по вашему усмотрению */
 
 /* Ваши собственные стили могут быть добавлены после этого обнуления */
 
@@ -43,11 +17,12 @@ body {
     /* Другие стили для текста */
 }
 
-.wrapper{
-    min-height:100%;
-    overflow:hidden;
+.wrapper {
+    min-height: 100vh; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
 
 ._container{
   max-width:1046px;
@@ -65,8 +40,13 @@ body {
     display:flex;
     min-height:102px;
     align-items:center;
-    
     }
+    @media (max-width: 479px) {
+        .header_container{
+            min-height:70px;
+            background-color: bisque;
+        }
+      }
     .menu{
         padding: 5px 0;
     }
@@ -84,14 +64,77 @@ body {
             margin: 0px 0px 0px 40px;
         }
       }
+      @media (max-width: 479px) {
+        .header_menu{
+            margin: 0px 0px 0px 20px;
+        }
+      }
     .menu_list{
         display: flex;
         flex-wrap: wrap; 
+        justify-content: space-between;
         > .menu_item:not(:last-child) {
-          margin: 0px 61px 0px 0px;
+          margin-right: 61px;
         }
     }
+    a{
+        font-weight: 600;
+        color:333333;
+        font-size: 12px;
+        line-height: calc(24/14*100%);
+    }
+    @media (max-width: 479px) {
+        a{
+            font-size: 18px;
+        }
+      }
 
+}
+
+.main{
+    flex: 1 1 auto;
+    .projectHome {
+        display: flex; /* Встановлюємо відображення flex для горизонтального розташування дочірніх елементів */
+        // align-items: center; /* Вирівнюємо елементи по вертикалі по центру */
+        .main_name{
+            margin: 333px 105px 0px 0px;
+            width: 277.76px;
+            height: 128px;
+            .main_name_project{
+                color:$color_grey;
+                font-size: $size_b;
+                font-weight:$font_light;
+            }
+            .main_name_home{
+                color: $color_black;
+                font-size: $size_b;
+                font-weight:$font_bold;
+            }
+        }
+        .main_arrows{
+            display: flex;
+            width: 129px;
+            height: 53px;
+            margin: 90px 0px 0px 0px;
+            .main_arrow_right{
+                width: 24px;
+                height: 24px;
+            }
+            .main_arrow_left{
+                width: 24px;
+                margin-left: 40px;
+            } 
+        }
+        .main_pic{
+            width: 770px;
+            height: 829px;
+        }
+    }
+}
+
+.footer{
+    margin-top: auto;
+    
 }
 
 
